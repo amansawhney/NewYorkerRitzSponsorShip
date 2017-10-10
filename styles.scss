@@ -1,0 +1,36 @@
+body{
+    height: 1500px;
+    background-color:#c0e0d7;
+    .container-hero{
+        background-color: #df1e2a;
+        height: 500px;
+        width: 100%;
+        position: relative;
+    }
+    header{
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        .wrapper{
+            text-align: center;
+            position: relative;
+            h1{
+                font-size: 100px;
+                font-weight:bold;
+                font-family: sans-serif;
+                letter-spacing: -0.03em;
+                margin:0;
+                padding:0;
+                color: #c0e0d7;
+            }
+        }
+    }
+}
