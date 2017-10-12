@@ -18,24 +18,28 @@ function setWindow() {
 }
 
 function viewportLog() {
-  // log view counter
-  id = '';
-  if (counter === 0) {
-    id = '#mydivname';
-  } else if (counter === 1) {
-    id = '#mydivname2';
-  } else if (counter === 2) {
-    id = '#mydivname3';
-  } else if (counter === 3) {
-    id = '#mydivname4';
-  } else if (counter === 4) {
-    id = '#mydivname5';
-  } else if (counter === 5) {
-    id = '#mydivname6';
-  } else if (counter === 6) {
-    id = '#mydivname7';
-  }
-  if (
+    if (
+        topInViewport($('#reset')) &&
+        $('#elem').css('background-image').indexOf('image1_@2x.jpg') === -1
+    ) {
+        console.log(
+            $('#elem').css('background-image').indexOf('image1_@2x.jpg') === -1,
+        );
+        newUrl = "'./Assets for Developer 10-10-17/image1_@2x.jpg'";
+        if (
+            !changed &&
+            $('#elem').css('background-image').indexOf('image1_@2x.jpg') === -1
+        ) {
+            changed = true;
+            $('#elem')
+                .stop(true).fadeTo('slow', 0, function() {
+                $(this).css('background-image', 'url(' + newUrl + ')');
+                console.log('1');
+            })
+                .fadeTo('slow', 1);
+            return;
+        }
+    } else if (
     topInViewport($('#mydivname')) &&
     $('#elem').css('background-image').indexOf('image2_@2x.jpg') === -1
   ) {
