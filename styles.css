@@ -12,8 +12,8 @@
     right:0px;
 }
 p {
-    font-size: 1.6rem;
     font: 18px/32px "Libre Baskerville",Georgia,serif;
+    font: 1.125rem/2rem "Libre Baskerville",Georgia,serif;
     color: #333333;
 }
 .spacer {
@@ -26,8 +26,6 @@ p {
     background-position: right;
     background-size: 50%, auto;
     width: 100%;
-    height: -webkit-calc(100vh);
-    height: -moz-calc(100vh);
     height: calc(100vh);
     position: fixed;
     right: 0;
@@ -36,7 +34,9 @@ html {
     background-color: #fafafa;
 }
 @media (min-width: 576px) {
-    .offset-sm-1 {     margin: 0 5%;
+    .offset-sm-1 {
+         margin: 0 5%;
     }
 }
+
 

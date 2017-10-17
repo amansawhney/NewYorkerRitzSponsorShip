@@ -11,14 +11,25 @@
 
 <style>
     .vertical-align {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
     }
 
     .vertical-align > [class^="col-"],
     .vertical-align > [class*=" col-"] {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center; /* Optional, to align inner items
                               horizontally inside the column */
     }
@@ -32,6 +43,8 @@
     .vertical-align > [class^="col-"] > div,
     .vertical-align > [class*=" col-"] > div {
         /* flex: 1; */
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
         flex-grow: 1;
     }
 
@@ -41,9 +54,13 @@
      ==================================*/
 
     iframe {
-        border: none;
         width: 100%;
         height: 100vh;
+        padding: 0;
+        border: 1px inset #7a8b8b;
+        margin: 0 auto;
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
     }
     body {
         padding:0;
@@ -72,7 +89,10 @@
     .bottom {
         position: absolute;
         bottom: 12.5%;
-    }
+    }git
+
+
+
 
 </style>
 
@@ -83,43 +103,53 @@
     </div>
 
 </header>
-<section id="frameHolder"><iframe id="yourDiv"src="index.html" ></iframe>
-    <!--<div class="footer ">-->
-        <!--<div class="row vertical-align">-->
-            <!--<br>-->
-            <!--<div class="col-sm-4 offset-sm-2">-->
-                <!--<img class="img-fluid" src="Assets%20for%20Developer%2010-10-17/GlenDixon_headshot.png" style="margin: 10%">-->
-            <!--</div>-->
-            <!--<div class="col-sm-4 ">-->
-<!--<span class="align-middle">-->
-                <!--<h1>Glen Dixon</h1>-->
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo congue erat sed eleifend. Aliquam egestas ligula est, sed hendrerit libero auctor sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam varius tellus et odio pharetra, sit amet ullamcorper leo aliquet. Integer eu iaculis leo. Proin ut volutpat turpis. Nam quis nisl diam.-->
-                <!--</p>-->
-<!--</span>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="footer-2 ">-->
-        <!--<div class="row vertical-align">-->
-            <!--<div class="col-sm-8 offset-sm-2" >-->
-                <!--<h1 style="margin: 5%">Lorem ipsum dolor sit amet.</h1>-->
-            <!--</div>-->
-            <!--<a class="col-sm-4 offset-sm-4" href="tbh">-->
-                <!--<img class="img-fluid" src="Assets%20for%20Developer%2010-10-17/footer-CTA_@2x.png">-->
-            <!--</a>-->
-        <!--</div>-->
-    <!--</div>-->
+<div class="desktop">
+    <section id="frameHolder" ><iframe id="yourDiv"src="index.html" ></iframe>
+    </section>
+</div>
 
-</section>
 
 <script type="text/javascript">
+    window.onload = function () {
+        var veiw = getViewport();
+        console.log(veiw[0])
+        if (veiw[0] <= 1000) {
+            console.log("HIIIII");
+            document.getElementById('yourDiv').setAttribute('src', "moblie.html");
+        }
+    }
     window.onscroll = function() {
         stickyScroll(document.getElementById('#yourDiv'));
-        console.log("scrolling")
+
     };
+    function getViewport() {
+
+        var viewPortWidth;
+        var viewPortHeight;
+
+        // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+        if (typeof window.innerWidth != 'undefined') {
+            viewPortWidth = window.innerWidth,
+                viewPortHeight = window.innerHeight
+        }
+
+// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+        else if (typeof document.documentElement != 'undefined'
+            && typeof document.documentElement.clientWidth !=
+            'undefined' && document.documentElement.clientWidth != 0) {
+            viewPortWidth = document.documentElement.clientWidth,
+                viewPortHeight = document.documentElement.clientHeight
+        }
+
+        // older versions of IE
+        else {
+            viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+                viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+        }
+        return [viewPortWidth, viewPortHeight];
+    }
+
     function stickyScroll(e) {
-        console.log(window.innerHeight)
-        console.log(window.pageYOffset );
 
         if( window.pageYOffset > (innerHeight)) {
             document.getElementById('yourDiv').scrolling = 'yes';
