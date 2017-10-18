@@ -92,9 +92,9 @@ max-width: 90%;
 }
 </style>
 
-<header id="header">
-    <div class="col-sm-6 offset-sm-3 bottom">
-        <img class="img-fluid" src="Assets for Developer 10-10-17/title-treatment_@2x.png" />
+<header id="header" class="row">
+    <div class=" col-sm-6 offset-3 bottom">
+        <img class="img-fluid " src="Assets for Developer 10-10-17/title-treatment_@2x.png" />
 
     </div>
 
@@ -106,14 +106,6 @@ max-width: 90%;
 
 
 <script type="text/javascript">
-    window.onload = function () {
-        var veiw = getViewport();
-        console.log(veiw[0])
-        if (veiw[0] <= 1000) {
-            console.log("HIIIII");
-            document.getElementById('yourDiv').setAttribute('src', "moblie.html");
-        }
-    }
     window.onscroll = function() {
         stickyScroll(document.getElementById('#yourDiv'));
 
