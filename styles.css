@@ -33,10 +33,3 @@ p {
 html {
     background-color: #fafafa;
 }
-@media (min-width: 576px) {
-    .offset-sm-1 {
-         margin: 0 5%;
-    }
-}
-
-

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9b4d65d-3953-4b8e-9763-8b1b9fed4e03" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/moblie.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets for Developer 10-10-17/title-treatment_@2x.png" afterPath="$PROJECT_DIR$/Assets for Developer 10-10-17/title-treatment_@2x.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iframe.html" afterPath="$PROJECT_DIR$/iframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles.css" afterPath="$PROJECT_DIR$/styles.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -860,7 +856,7 @@
       <file leaf-file-name="iframe.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/iframe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="-586">
               <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
               <folding />
             </state>
@@ -978,10 +974,10 @@
         <option value="$PROJECT_DIR$/styles.scss" />
         <option value="$PROJECT_DIR$/fullPage.js-master/jquery.fullPage.css" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/iframe.html" />
         <option value="$PROJECT_DIR$/styles.css" />
         <option value="$PROJECT_DIR$/moblie.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/iframe.html" />
       </list>
     </option>
   </component>
@@ -1107,12 +1103,12 @@
       <workItem from="1507688293749" duration="4890000" />
       <workItem from="1507770278216" duration="4990000" />
       <workItem from="1507822318728" duration="5154000" />
-      <workItem from="1508255802792" duration="5070000" />
+      <workItem from="1508255802792" duration="6330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41217000" />
+    <option name="totallyTimeSpent" value="42477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="486" y="23" width="1434" height="1177" extended-state="0" />
@@ -3472,7 +3468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/iframe.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="-586">
           <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
           <folding />
         </state>
